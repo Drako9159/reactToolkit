@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useSelector } from "react-redux";
+import TaskForm from "./components/TaskForm";
+import TasksList from "./components/TasksList";
+import taskSlice from "./features/tasks/taskSlice";
+//useDispach para actualizar el setState
+//userSelector para traer el state getState
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hola mundito</h1>
+      <TaskForm></TaskForm>
+      <TasksList></TasksList>
     </div>
   );
 }
